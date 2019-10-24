@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.millet.android"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true //65535
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //arouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+        //解决butterknife依赖报错的问题
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    signingConfigs {
+        release {
+            try {
+                storeFile file("zhidao_key.jks")
+                storePassword "123456"
+                keyAlias "key0"
+                keyPassword "123456"
+            } catch (ex) {
+                throw new InvalidUserDataException(ex.toString())
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            resValue "string", "app_name", "ReleaseAndroid"
+            buildConfigField 'boolean', 'APP_DEBUG', 'false'
+            buildConfigField 'String', 'BASE_URL', '"http://android.appzhidao.com/"'
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            resValue "string", "app_name", "DebugAndroid"
+            buildConfigField 'boolean', 'APP_DEBUG', 'true'
+            buildConfigField 'String', 'BASE_URL', '"http://android-test.appzhidao.com/"'
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // arouter
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    // butterknife
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    //广告banner
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    implementation project(path: ':component')
+}

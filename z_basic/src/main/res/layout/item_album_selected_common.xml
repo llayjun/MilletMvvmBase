@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.millet.z_basic.ui.view.square.SquareRelativelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.millet.z_basic.ui.view.square.SquareFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_corner_stroke_dash"
+        android:gravity="center"
+        android:padding="20pt">
+
+        <ImageView
+            android:id="@+id/iv_album_selected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@mipmap/ic_launcher"
+            android:scaleType="centerCrop" />
+
+    </com.millet.z_basic.ui.view.square.SquareFrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_remove"
+        android:layout_width="76pt"
+        android:layout_height="76pt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_delete_select" />
+
+</com.millet.z_basic.ui.view.square.SquareRelativelayout>

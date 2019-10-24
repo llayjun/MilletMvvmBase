@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ActivityTranslucent">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <!-- 解决白屏问题 -->
+    <style name="AppThemeWithNoPreview" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--为了解决跳转白屏问题-->
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <!--DialogFragment的底部弹出样式-->
+    <style name="BottomDialogFragment" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item><!--dialog顶部默认自带一个title位置，要去掉-->
+        <item name="android:windowTitleStyle">@null</item><!--顶部title样式-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景-->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialog.AnimationStyle</item><!--动画-->
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <!--底部弹出动画-->
+    <style name="BottomDialog.AnimationStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+    <!--顶部弹出动画-->
+    <style name="PopupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_show</item>
+        <item name="android:windowExitAnimation">@anim/pop_close</item>
+    </style>
+
+    <!--Dialog的弹出样式-->
+    <style name="DialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item><!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item><!-- 是否有标题 -->
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item><!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0.3</item><!-- 屏幕背景变暗值，可在代码中设置 -->
+    </style>
+
+    <!--Dialog的NoTitle样式-->
+    <style name="DialogNoTitleStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item><!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item><!-- 是否有标题 -->
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item><!-- 去除黑色边框的关键设置项 -->
+    </style>
+
+    <!-- 自定义Dialog -->
+    <style name="Custom_Progress" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.millet.z_basic.ui.view.square.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_corner_stroke_dash"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_album_selected_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#969696"
+            android:textSize="10sp"
+            tools:text="2/3" />
+
+    </LinearLayout>
+
+</com.millet.z_basic.ui.view.square.SquareFrameLayout>

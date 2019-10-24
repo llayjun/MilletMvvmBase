@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.millet.z_basic.ui.view.scan.view.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:inner_corner_color="#ffffff"
+        app:inner_corner_length="30pt"
+        app:inner_corner_width="4pt"
+        app:inner_height="800pt"
+        app:inner_margintop="400pt"
+        app:inner_scan_bitmap="@drawable/scan_light"
+        app:inner_scan_iscircle="false"
+        app:inner_scan_speed="10"
+        app:inner_width="800pt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="70pt"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300pt"
+        android:drawablePadding="13pt"
+        android:gravity="center_vertical"
+        android:text="将二维码/条形码放入框内扫描识别"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

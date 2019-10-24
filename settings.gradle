@@ -1,0 +1,2 @@
+include ':app', ':z_basic', ':component', ':special'
+rootProject.name='MilletAndroid'

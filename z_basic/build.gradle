@@ -1,0 +1,121 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true //65535
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //arouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api 'androidx.appcompat:appcompat:1.1.0'
+
+    // constraintLayout
+    api 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    // blankj:utilcode
+    api 'com.blankj:utilcodex:1.25.9'
+
+    // okhttp、retrofit、rxjava
+    api 'com.squareup.retrofit2:retrofit:2.6.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    api 'io.reactivex.rxjava2:rxjava:2.1.15'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api 'com.squareup.retrofit2:converter-gson:2.6.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    api 'com.squareup.retrofit2:converter-scalars:2.6.0'
+
+    //放着没有及时回收造成RxJava内存泄漏
+    api 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    api 'com.trello.rxlifecycle2:rxlifecycle-navi:2.1.0'
+    api 'android.arch.lifecycle:extensions:1.1.1'
+
+    //Room的依赖引用
+    api 'android.arch.persistence.room:runtime:2.1.4'
+    annotationProcessor 'android.arch.persistence.room:compiler:2.1.4'
+
+    //Room配合RxJava使用
+    api 'android.arch.persistence.room:rxjava2:2.1.4'
+
+    // 日志打印
+    api 'com.orhanobut:logger:2.2.0'
+    // mmkv
+    api 'com.tencent:mmkv:1.0.23'
+    // multidex
+    api 'com.android.support:multidex:1.0.3'
+    // arouter
+    api 'com.alibaba:arouter-api:1.3.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    // butterknife
+    api 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    // glide
+    api 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    // 沉浸状态栏
+    // 基础依赖包，必须要依赖
+    api 'com.gyf.immersionbar:immersionbar:3.0.0-beta05'
+    // fragment快速实现（可选）
+    api 'com.gyf.immersionbar:immersionbar-components:3.0.0-beta05'
+    // 万能适配器
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+    // 底部导航栏
+    api 'com.ashokvarma.android:bottom-navigation-bar:2.1.0'
+    // gson
+    api 'com.google.code.gson:gson:2.8.5'
+    // smartRefreshLayout
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-21'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-21'
+    // 左滑删除
+    api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    // permissions
+    api 'com.yanzhenjie:permission:2.0.0-rc11'
+    // flexbox
+    api 'com.google.android:flexbox:0.3.2'
+    // timepick
+    api 'com.contrarywind:Android-PickerView:4.1.6'
+    // matisse
+    api 'com.zhihu.android:matisse:0.4.3'
+    // 裁剪
+    api 'com.github.yalantis:ucrop:2.2.3-native'
+    // eventsbus
+    api 'org.greenrobot:eventbus:3.1.1'
+    // banner
+    api 'com.ms:Banner-androidx:2.3.17'
+    // photo view
+    api 'com.github.chrisbanes:PhotoView:2.0.0'
+    // FlyTabLayout
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    // zxing
+    api 'com.google.zxing:core:3.3.0'
+    // RWidget
+    api 'com.ruffian.library:RWidgetHelper:1.1.5'
+
+
+}

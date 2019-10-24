@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ruffian.library:RWidgetHelper:1.1.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/07fa9b30c5bd80ea63902246f46b1344/jetified-RWidgetHelper-1.1.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/07fa9b30c5bd80ea63902246f46b1344/jetified-RWidgetHelper-1.1.5/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ruffian.library/RWidgetHelper/1.1.5/55c01dca113ede6626c12da1de6ec55645dcf4b8/RWidgetHelper-1.1.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ruffian.library/RWidgetHelper/1.1.5/42dceaa606f5c7a2524b1a7b9fb7d2adde9a2ee2/RWidgetHelper-1.1.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
