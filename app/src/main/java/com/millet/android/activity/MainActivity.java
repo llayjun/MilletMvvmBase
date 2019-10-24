@@ -6,7 +6,8 @@ import androidx.lifecycle.Observer;
 
 import com.millet.android.R;
 import com.millet.android.databinding.ActivityMainBinding;
-import com.millet.android.viewmodel.HomeViewModel;
+import com.millet.android.activity.viewmodel.MainViewModel;
+import com.millet.android.view.GlideImageLoader;
 import com.millet.z_basic.base.mvvm.BaseMvvmActivity;
 import com.millet.z_basic.net.bean.BannerBean;
 import com.millet.z_basic.net.bean.Resource;
@@ -15,7 +16,7 @@ import com.youth.banner.BannerConfig;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseMvvmActivity<HomeViewModel, ActivityMainBinding> {
+public class MainActivity extends BaseMvvmActivity<MainViewModel, ActivityMainBinding> {
 
     @Override
     public int getLayout() {

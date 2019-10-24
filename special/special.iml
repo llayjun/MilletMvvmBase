@@ -192,5 +192,6 @@
     <orderEntry type="library" name="Gradle: com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.ruffian.library:RWidgetHelper:1.1.5@aar" level="project" />
     <orderEntry type="module" module-name="z_basic" />
+    <orderEntry type="module" module-name="z_basic" />
   </component>
 </module>

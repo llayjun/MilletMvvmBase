@@ -1,4 +1,4 @@
-package com.millet.android.activity;;
+package com.millet.android.view;;
 
 import android.content.Context;
 import android.widget.ImageView;

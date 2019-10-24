@@ -1,7 +1,6 @@
 package com.millet.z_basic.base.mvvm;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -14,12 +13,10 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.blankj.utilcode.util.AdaptScreenUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.google.gson.JsonSyntaxException;
 import com.gyf.immersionbar.ImmersionBar;
 import com.millet.z_basic.R;
-import com.millet.z_basic.base.mvp.BaseMvpPresenter;
 import com.millet.z_basic.base.mvp.IBaseMvpView;
 import com.millet.z_basic.base.mvp.IFragment;
 import com.millet.z_basic.base.mvvm.base.BaseViewModel;
@@ -33,8 +30,6 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
-
-import butterknife.ButterKnife;
 
 public abstract class BaseMvvmFragment<VM extends BaseViewModel, VDB extends ViewDataBinding> extends RxFragment implements IBaseMvpView, IFragment {
 

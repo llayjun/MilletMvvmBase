@@ -206,5 +206,8 @@
     <orderEntry type="module" module-name="component" />
     <orderEntry type="module" module-name="special" />
     <orderEntry type="module" module-name="z_basic" />
+    <orderEntry type="module" module-name="component" />
+    <orderEntry type="module" module-name="special" />
+    <orderEntry type="module" module-name="z_basic" />
   </component>
 </module>
