@@ -74,7 +74,31 @@ android {
         enabled = true
     }
 
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def buildName = variant.buildType.name
+            if ('release'.equals(buildName)) {
+                outputFileName  = "Millet_" + getTimestamp() + "_R_V" + android.defaultConfig.versionName + ".apk"
+            } else if ('debug'.equals(buildName)) {
+                outputFileName  = "Millet_" + getTimestamp() + "_T_V" + android.defaultConfig.versionName + ".apk"
+            }
+        }
+    }
+
 }
+
+def getTimestamp() {
+    return new Date().format("yyyyMMdd")
+}
+
+def buildTime() {
+    return new Date().format("yyyy-MM-dd HH:mm:ss")
+}
+
+def hostName() {
+    return System.getProperty("user.name") + "@" + InetAddress.localHost.hostName
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
