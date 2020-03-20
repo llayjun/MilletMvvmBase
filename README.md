@@ -1,5 +1,5 @@
-# MilletBase
-Android基本库，持续更新, java+livedata+viewmodel+rxjava+retrofit2
+# MilletBase,java+livedata+viewmodel+rxjava+retrofit2
+Android基本库，持续更新
 
 #### 相关代码
 #### 拍照上传头衔带裁剪功能
