@@ -1,6 +1,7 @@
 package com.millet.android.activity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.lifecycle.Observer;
 
@@ -30,12 +31,11 @@ public class MainActivity extends BaseMvvmActivity<MainViewModel, ActivityMainBi
 
     @Override
     public void initData(Bundle savedInstanceState) {
-
+        binding.setViewModels(this);
     }
 
-    @Override
-    public void loadData() {
-        mViewModel.getBanner().observe(this, new Observer<Resource<List<BannerBean>>>() {
+    public void lick(View view){
+        mViewModel.getBanner().observe(MainActivity.this, new Observer<Resource<List<BannerBean>>>() {
             @Override
             public void onChanged(Resource<List<BannerBean>> listResource) {
                 listResource.handler(new OnCallback<List<BannerBean>>() {
@@ -46,6 +46,11 @@ public class MainActivity extends BaseMvvmActivity<MainViewModel, ActivityMainBi
                 });
             }
         });
+    }
+
+    @Override
+    public void loadData() {
+
     }
 
     @Override

@@ -4,6 +4,10 @@
 
     <data>
 
+        <variable
+            name="viewModels"
+            type="com.millet.android.activity.MainActivity" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -11,13 +15,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="200pt"
+            android:onClick="@{viewModels.lick}"
+            android:text="点击获取"
+            android:textSize="20pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.youth.banner.Banner
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="500pt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

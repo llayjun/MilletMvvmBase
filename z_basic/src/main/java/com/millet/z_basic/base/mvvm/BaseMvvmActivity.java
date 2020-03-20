@@ -65,8 +65,7 @@ public abstract class BaseMvvmActivity<VM extends BaseViewModel, VDB extends Vie
     }
 
     public LifecycleTransformer bindLifecycle() {
-        LifecycleTransformer objectLifecycleTransformer = bindToLifecycle();
-        return objectLifecycleTransformer;
+        return bindToLifecycle();
     }
 
     /**

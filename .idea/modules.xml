@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MilletAndroid.iml" filepath="$PROJECT_DIR$/MilletAndroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/component/component.iml" filepath="$PROJECT_DIR$/component/component.iml" />
-      <module fileurl="file://$PROJECT_DIR$/special/special.iml" filepath="$PROJECT_DIR$/special/special.iml" />
-      <module fileurl="file://$PROJECT_DIR$/z_basic/z_basic.iml" filepath="$PROJECT_DIR$/z_basic/z_basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MilletAndroid.iml" filepath="$PROJECT_DIR$/MilletAndroid.iml" group="MilletAndroid" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="MilletAndroid/app" />
+      <module fileurl="file://$PROJECT_DIR$/component/component.iml" filepath="$PROJECT_DIR$/component/component.iml" group="MilletAndroid/component" />
+      <module fileurl="file://$PROJECT_DIR$/special/special.iml" filepath="$PROJECT_DIR$/special/special.iml" group="MilletAndroid/special" />
+      <module fileurl="file://$PROJECT_DIR$/z_basic/z_basic.iml" filepath="$PROJECT_DIR$/z_basic/z_basic.iml" group="MilletAndroid/z_basic" />
     </modules>
   </component>
 </project>
